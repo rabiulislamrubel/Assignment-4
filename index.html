@@ -36,75 +36,110 @@
 
 
         <div class="booking-form">
-            <h3>Book Ocean Time</h3>
-            <div class="input-group">
-                <label for="">Flying From</label>
-                <input class="inp-style" type="text" name="" placeholder="Dhaka, Bangladesh">
-            </div>
-            <div class="input-group">
-                <label for="">Flying To</label>
-                <input class="inp-style" type="text" name="" placeholder="New York, United States">
-            </div>
-            <div class="inputs">
-                <div class="input-group">
-                    <label" for="">Departure</label>
-                    <input class="inp-style" type="date" name="">
-                </div>
-                <div class="input-group">
-                    <label for="">Return</label>
-                    <input class="inp-style" type="date" name="">
-                </div>
-            </div>
-            <div class="input-group f-class">
-                <div>
-                    <label for="">First Class ($ <span id="f-per-ticket-price">150</span>)</label>
-                    <input class="inp-style inp-width" type="text" name="" id="firstClass-ticket-count" value="1">
-                </div>
-                <div class="plus-minus-btn">
-                    <button id="firstClass-increase-btn" class="button">+</button>
-                    <button id="firstClass-decrease-btn" class="button">-</button>
-                </div>
-            </div>
-            
-            <div class="input-group f-class">
-                <div>
-                    <label for="">Economy ($ <span id="e-per-ticket-price">100</span>)</label>
-                    <input class="inp-style inp-width" type="text" name="" value="1" id="economy-ticket-count">
-                </div>
-                <div class="plus-minus-btn">
-                    <button id="economy-increase-btn" class="button">+</button>
-                    <button id="economy-decrease-btn" class="button">-</button>
-                </div>
-            </div>
-            <div class="calculations">
-                <div class="amount">
-                    <div class="left">
-                        <p>Subtotal</p>
+                <div id="book-form">
+                    <h3>Book Ocean Time</h3>
+                    <div class="input-group">
+                        <label for="">Flying From</label>
+                        <input class="inp-style" type="text" name="" placeholder="Dhaka, Bangladesh">
                     </div>
-                    <div class="right">
-                        <p id="sub-total">$00</p>
+                    <div class="input-group">
+                        <label for="">Flying To</label>
+                        <input class="inp-style" type="text" name="" placeholder="New York, United States">
                     </div>
+                    <div class="inputs">
+                        <div class="input-group">
+                            <label" for="">Departure</label>
+                            <input class="inp-style" type="date" name="">
+                        </div>
+                        <div class="input-group">
+                            <label for="">Return</label>
+                            <input class="inp-style" type="date" name="">
+                        </div>
+                    </div>
+                    <div class="input-group f-class">
+                        <div>
+                            <label for="">First Class ($150) <span id="f-per-ticket-price">00</span></label>
+                            <input class="inp-style inp-width" type="text" name="" id="firstClass-ticket-count" value="0">
+                        </div>
+                        <div class="plus-minus-btn">
+                            <button id="firstClass-increase-btn" class="button">+</button>
+                            <button id="firstClass-decrease-btn" class="button">-</button>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group f-class">
+                        <div>
+                            <label for="">Economy ($100) <span id="e-per-ticket-price">00</span></label>
+                            <input class="inp-style inp-width" type="text" name="" value="0" id="economy-ticket-count">
+                        </div>
+                        <div class="plus-minus-btn">
+                            <button id="economy-increase-btn" class="button">+</button>
+                            <button id="economy-decrease-btn" class="button">-</button>
+                        </div>
+                    </div>
+                    <div class="calculations">
+                        <div class="amount">
+                            <div class="left">
+                                <p>Subtotal</p>
+                            </div>
+                            <div class="right">
+                                <p id="sub-total">$00</p>
+                            </div>
+                        </div>
+                    
+                        <div class="amount">
+                            <div class="left">
+                                <p>Charge 10% VAT</p>
+                            </div>
+                            <div class="right">
+                                <p id="tax">$0</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="amount">
+                            <div class="left">
+                                <h4>Total</h4>
+                            </div>
+                            <div class="right">
+                                <p id="total">$00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn-style" id="book-details">Book Now</button>
                 </div>
+                <div id="booking-order-list" >
+                    <h3>Book Order Details</h3>
+                    <div>
+                        <h5>Flying from: Dhaka, Bangladesh.</h5>
+                        <h5>Flying to: New York, United States.</h5>
+                    </div>
+                    <div>
+                        <h5>Departure Date: January 30, 2021.</h5>
+                        <h5>Return Date: April 30, 2021.</h5>
+                    </div>
+                    <table>
+                        <tr>
+                            <th>Class</th>
+                            <th>Quantity</th>
+                            <th>Amount</th>
+                        </tr>
+                        <tr>
+                            <td>First Class</td>
+                            <td id="f-ticket-quantity">0</td>
+                            <td id="f-amount"> $00</td>
+                        </tr>
+                        <tr>
+                            <td>Economy</td>
+                            <td id="e-ticket-quantity">0</td>
+                            <td id="e-amount">$00</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Total</td>
+                            <td id="booking-total">$ 00</td>
+                        </tr>
+                    </table>
 
-                <div class="amount">
-                    <div class="left">
-                        <p>Charge 10% VAT</p>
-                    </div>
-                    <div class="right">
-                        <p id="tax">$0</p>
-                    </div>
                 </div>
-                <hr>
-                <div class="amount">
-                    <div class="left">
-                        <h4>Total</h4>
-                    </div>
-                    <div class="right">
-                        <p id="total">$00</p>
-                    </div>
-                </div>
-            </div>
-            <button class="btn-style">Book Now</button>
         </div>
     </main>
 

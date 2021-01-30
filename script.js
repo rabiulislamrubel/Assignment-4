@@ -19,6 +19,7 @@ document.getElementById('economy-decrease-btn').addEventListener('click', functi
     totalCalculation();
 })
 
+
 function IncreaseDecreaseBtn(plusBtn,id,price){
     const ticketCount = document.getElementById(id);
     const ticketCountNum = parseInt(ticketCount.value);
@@ -50,4 +51,29 @@ function totalCalculation(){
 
     let total = subTotal + tax;
     document.getElementById('total').innerText = '$'+ total;
+}
+
+document.getElementById('book-details').addEventListener('click', function(){
+    getId('book-form').style.display = 'none';
+    getId('booking-order-list').style.display = 'block';
+
+    getValue('firstClass-ticket-count','f-ticket-quantity');
+    getValue('economy-ticket-count','e-ticket-quantity');
+
+    getInnerText('f-per-ticket-price','f-amount');
+    getInnerText('e-per-ticket-price','e-amount');
+    getInnerText('total', 'booking-total');
+});
+
+function getId (id){
+    var docReturn = document.getElementById(id);
+    return docReturn;
+}
+function getValue(id1,id2){
+    var getValue1 = getId(id1).value;
+    getId(id2).innerText = getValue1;
+}
+function getInnerText(id1,id2){
+    var innerTxt = getId(id1).innerText;
+    getId(id2).innerText ='$'+innerTxt;
 }
